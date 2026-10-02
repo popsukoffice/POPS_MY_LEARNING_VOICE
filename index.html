@@ -1282,7 +1282,7 @@ function parseSaved(text) {
   document.getElementById("resumeText").innerHTML = lines.join("<br>");
   box.classList.remove("hidden");
 })();
-const SEND_ENDPOINT = "https://script.google.com/macros/s/AKfycbwZF83etinzGFMaSAz-IUOMK9Yjjv4_I3zwDTb0e--npN3wIgiDVIc9Z9nEDc8iVpj9/exec";
+const SEND_ENDPOINT = "https://script.google.com/macros/s/AKfycbwHuAtuOYedaOdjStbHpW6SX91PmmEKTgD30dlCs11Tb5XYB4LI-C6FEZ55RETprlpg3Q/exec";
 function reportFileHTML() {
   const data = JSON.stringify(saveProgress()).replace(/</g, "\\u003c");
   return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>My Learning Voice'.concat(STAFF ? " \u2013 Staff View" : "", " \u2013 ").concat(esc(answers.name || "Young person"), '</title><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet"><style>body{margin:0;background:#f2f7f8}.wrap{max-width:860px;margin:24px auto;background:#fff;padding:28px 32px;border-radius:14px}@media print{body{background:#fff}.wrap{margin:0;padding:0}}').concat(REPORT_CSS, '</style></head><body><div class="wrap">').concat(buildReportHTML(), '</div><script type="application/json" id="pops-data">').concat(data, "<\/script></body></html>");
